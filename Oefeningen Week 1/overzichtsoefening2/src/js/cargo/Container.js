@@ -1,3 +1,4 @@
+/*jslint node: true */
 "use strict";
 // naam: Yasin El Bannasri
 import Product from './Product';
@@ -29,7 +30,7 @@ export default class Container{
             // console.log("after too heavy");
             this._products.push(product);
         } else {
-            throw new Error('Not instance of product)')
+            throw new Error('Not instance of product)');
         }
     }
     getProductAtIndex(index) {
