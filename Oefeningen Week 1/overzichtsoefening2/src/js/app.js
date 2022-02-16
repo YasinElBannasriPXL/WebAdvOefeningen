@@ -16,9 +16,7 @@ try{
     let product4 = new Product(4, 2);
     let product5 = new Product(4, 2);
     container2.addProduct(product4);
-    // container2.addProduct(product5);
     console.log(container2.getProductAtIndex(0));
-    // console.log(container2.getProductAtIndex(2));
 } catch(error){
     console.log(error.message);
 }

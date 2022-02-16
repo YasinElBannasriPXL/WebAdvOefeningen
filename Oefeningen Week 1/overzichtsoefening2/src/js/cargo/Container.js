@@ -7,7 +7,7 @@ export default class Container{
             throw new Error('Maxweight under 0');
         } else {
             this._products = [];
-            const _maxWeight = maxWeight;
+            this._maxWeight = maxWeight;
         }
     }
     addProduct(product) {
@@ -20,11 +20,13 @@ export default class Container{
             let totalWeight = 0;
             this._products.forEach(p => {
                 totalWeight += p.weight;
-                console.log("totalweight is now " + totalWeight);
             });
-            if (totalWeight >= this._maxWeight) {
+            totalWeight += product.weight;
+            // console.log(`Before TOTALWEIGHT the weight is: ${totalWeight} and ${totalWeight > this._maxWeight} \n maxweight is ${this._maxWeight}`)
+            if (totalWeight > this._maxWeight) {
                 throw new Error("Too heavy");
             }
+            // console.log("after too heavy");
             this._products.push(product);
         } else {
             throw new Error('Not instance of product)')
@@ -37,5 +39,10 @@ export default class Container{
             throw new Error ('Index out of bounds');
         }
     } 
+
+    //unnecessary, for testing purposes
+    get maxWeight() {
+        return this._maxWeight;
+    }
 
 }
