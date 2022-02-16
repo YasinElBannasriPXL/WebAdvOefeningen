@@ -12,12 +12,18 @@ try{
     container.addProduct(product2);
     console.log(container.getProductAtIndex(1).weight);
     container.addProduct(product3);
+    let container2 = new Container(1);
+    let product4 = new Product(4, 2);
+    let product5 = new Product(4, 2);
+    container2.addProduct(product4);
+    // container2.addProduct(product5);
+    console.log(container2.getProductAtIndex(0));
+    // console.log(container2.getProductAtIndex(2));
 } catch(error){
     console.log(error.message);
 }
 
 
 
-console.log("it works")
 
 
