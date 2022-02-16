@@ -26,7 +26,7 @@ export default class Student{
             }
         });
         if (amountCompleted === 0) {
-            alert("error");
+            throw new Error('error amount completed');
         } else {
             return sum / amountCompleted;
         }
