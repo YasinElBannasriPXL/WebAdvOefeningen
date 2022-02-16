@@ -1,5 +1,5 @@
 "use strict";
-// naam:
+// naam: Yasin El Bannasri
 import Product from './Product';
 export default class Container{
     constructor(maxWeight) {
