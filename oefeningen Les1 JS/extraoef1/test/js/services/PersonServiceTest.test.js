@@ -2,6 +2,7 @@ import PersonService from '../../../src/js/services/PersonService';
 import PersonRepository from '../../../src/js/repositories/PersonRepository';
 
 const persons = [[{id:1, name:"test1"}],[{id:2, name:"test2"}]];
+const namesStringToMatch = "GeertSofieTim";
 
 describe('retrieveNameById',
     () => {
@@ -20,5 +21,15 @@ describe('retrieveNameById',
 
     }
 );
+
+describe('findNames', () => {
+    test('findNames should return an array with names alphabetically sorted', async () => {
+        let personRepository = new PersonRepository();
+        let personService = new PersonService(personRepository);
+        let concatenatedNames = "";
+        Array.prototype.forEach.call(await personService.findNames(), p => concatenatedNames += p);
+        expect(concatenatedNames).toBe(namesStringToMatch);
+    })
+})
 
 
