@@ -22,8 +22,8 @@ export default class Stapel {
     }
 
     getNumeriekeWaarde() {
-        selectiesHasR = false;
-        somSelecties = 0;
+        let selectiesHasR = false;
+        let somSelecties = 0;
 
         this._selecties.forEach(s => {
             if (s.getDobbelsteen().getZijde() === 'R') {

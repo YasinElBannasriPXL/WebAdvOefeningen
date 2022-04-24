@@ -15,12 +15,12 @@ export default class Dobbelsteen {
     }
 
     getNumeriekeWaarde() {
-        if (this.getZijde === 'R') 
+        if (this.getZijde() === 'R') 
         {
             return 5;
         }
-        else if (this.getZijde === '1' || this.getZijde === '2' || this.getZijde === '3' || this.getZijde === '4' || this.getZijde === '5') {
-            return parseInt(this.getZijde);
+        else if (this.getZijde() === '1' || this.getZijde() === '2' || this.getZijde() === '3' || this.getZijde() === '4' || this.getZijde() === '5') {
+            return parseInt(this.getZijde());
         }
         else throw new Error('kan geen numerieke waarde krijgen van zijde');
     }
