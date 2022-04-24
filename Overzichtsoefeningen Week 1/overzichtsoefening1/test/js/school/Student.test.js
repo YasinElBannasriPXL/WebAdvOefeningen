@@ -9,3 +9,11 @@ test('throws on 0 completed courses', () => {
 
     }).toThrow();
 })
+
+test('return 12 on 1 completed course with grade 12', () => {
+    let student = new Student(423);
+    let course = new Course(1);
+    student.addCourse(course);
+    course.grade = 12;
+    expect(student.calculateGrade()).toBe(12);
+})
