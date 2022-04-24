@@ -8,19 +8,19 @@ export default class Hero extends WereldObject {
     }
 
     moveDown() {
-        super.setY(this.getY - 1);
+        super.setY(super.getY() - 1);
     }
 
     moveUp() {
-        super.setY(this.getY + 1);
+        super.setY(super.getY() + 1);
     }
 
     moveLeft() {
-        super.setX(this.getX - 1)
+        super.setX(super.getX() - 1)
     }
 
     moveRight() {
-        super.setX(this.getX + 1)
+        super.setX(super.getX() + 1)
     }
 
     get location() {

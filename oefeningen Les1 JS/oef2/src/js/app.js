@@ -10,7 +10,10 @@ window.addEventListener('load', (event) => {
 
     printPreElement(hero.location);
 
-    hero.moveRight();
+    // hero.moveRight();
+    // hero.moveDown();
+    hero.moveUp();
+    hero.moveLeft();
 
     printPreElement(hero.location);
 
